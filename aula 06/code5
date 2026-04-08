@@ -1,0 +1,17 @@
+public class Exercicio5 {
+    public static void main(String[] args) {
+        String curso = "Computação";
+
+        char primeiro = curso.charAt(0);
+        
+        char terceiro = curso.charAt(2);
+        
+        int tamanho = curso.length();
+        char ultimo = curso.charAt(tamanho - 1);
+
+        System.out.println("Palavra: " + curso);
+        System.out.println("Primeiro caractere: " + primeiro);
+        System.out.println("Terceiro caractere: " + terceiro);
+        System.out.println("Último caractere: " + ultimo);
+    }
+}
