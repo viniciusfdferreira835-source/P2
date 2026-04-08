@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Exercicio6 {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.print("Digite uma frase completa: ");
+        String frase = leitor.nextLine();
+
+        System.out.print("Qual palavra você quer buscar na frase? ");
+        String palavra = leitor.nextLine();
+
+        int resultado = frase.indexOf(palavra);
+
+        if (resultado != -1) {
+            System.out.println("Palavra encontrada! Ela começa no índice: " + resultado);
+        } else {
+            System.out.println("Palavra não encontrada. O método retornou: " + resultado);
+        }
+
+        leitor.close();
+    }
+}
