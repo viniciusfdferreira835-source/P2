@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.print("Digite a primeira palavra: ");
+        String palavra1 = leitor.nextLine();
+
+        System.out.print("Digite a segunda palavra: ");
+        String palavra2 = leitor.nextLine();
+
+        if (palavra1.equalsIgnoreCase(palavra2)) {
+            System.out.println("As palavras são iguais (ignorando maiúsculas/minúsculas).");
+        } else {
+            System.out.println("As palavras são diferentes.");
+        }
+
+        leitor.close();
+    }
+}
