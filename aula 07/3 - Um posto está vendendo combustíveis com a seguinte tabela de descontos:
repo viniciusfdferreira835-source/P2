@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class PostoDeCombustivel {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        double precoAlcool = 4.50;
+        double precoGasolina = 6.00;
+
+        System.out.print("Digite o número de litros vendidos: ");
+        double litros = leitor.nextDouble();
+
+        System.out.print("Digite o tipo de combustível (A - Álcool, G - Gasolina): ");
+        String tipo = leitor.next();
+
+        // Variáveis para guardar os resultados dos cálculos
+        double precoSemDesconto = 0.0;
+        double valorDesconto = 0.0;
+        double valorFinal = 0.0;
+
+        if (tipo.equalsIgnoreCase("A")) {
+            precoSemDesconto = litros * precoAlcool;
+            
+            if (litros <= 20) {
+                valorDesconto = precoSemDesconto * 0.03; // 3% de desconto
+            } else {
+                valorDesconto = precoSemDesconto * 0.05; // 5% de desconto
+            }
+            
+            valorFinal = precoSemDesconto - valorDesconto;
+            System.out.println("\n--- Resumo da Compra (Álcool) ---");
+
+        } else if (tipo.equalsIgnoreCase("G")) {
+            precoSemDesconto = litros * precoGasolina;
+            
+            if (litros <= 20) {
+                valorDesconto = precoSemDesconto * 0.04; // 4% de desconto
+            } else {
+                valorDesconto = precoSemDesconto * 0.06; // 6% de desconto
+            }
+            
+            valorFinal = precoSemDesconto - valorDesconto;
+            System.out.println("\n--- Resumo da Compra (Gasolina) ---");
+
+        } else {
+            System.out.println("\nErro: Tipo de combustível inválido! Digite A ou G.");
+            System.exit(0); // Encerra o programa imediatamente para não imprimir os zeros abaixo
+        }
+
+        System.out.printf("Valor bruto: R$ %.2f\n", precoSemDesconto);
+        System.out.printf("Desconto aplicado: R$ %.2f\n", valorDesconto);
+        System.out.printf("Valor total a pagar: R$ %.2f\n", valorFinal);
+
+        leitor.close();
+    }
+}
