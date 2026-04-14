@@ -1,0 +1,22 @@
+public class Exercicio5 {
+    public static void main(String[] args) {
+        int[] notas = {7, 8, 6, 10, 9};
+        
+        int soma = 0;
+        for (int i = 0; i < notas.length; i++) {
+            soma = soma + notas[i];
+        }
+        
+        double media = (double) soma / notas.length;
+        System.out.println("A média da turma é: " + media);
+        
+        int acimaDaMedia = 0;
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] > media) {
+                acimaDaMedia++; // Adiciona 1 no contador
+            }
+        }
+        
+        System.out.println("Quantidade de notas acima da média: " + acimaDaMedia);
+    }
+}
