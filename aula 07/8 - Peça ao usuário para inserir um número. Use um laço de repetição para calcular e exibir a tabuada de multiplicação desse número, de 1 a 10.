@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Exercicio8 {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        System.out.print("Digite um número para ver a sua tabuada: ");
+        int numero = leitor.nextInt();
+        
+        System.out.println("\n--- Tabuada do " + numero + " ---");
+        
+        for (int i = 1; i <= 10; i++) {
+            int resultado = numero * i;
+            // Imprime no formato clássico: 5 x 1 = 5
+            System.out.println(numero + " x " + i + " = " + resultado);
+        }
+        
+        leitor.close();
+    }
+}
