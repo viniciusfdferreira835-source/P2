@@ -48,8 +48,4 @@ Os diretórios estão organizados por aula, acompanhando a evolução da complex
 * **IDE:** Visual Studio Code
 * **Controle de Versão:** Git e GitHub
 
-## 🚀 Como executar os códigos localmente
 
-1. Clone este repositório em sua máquina:
-   ```bash
-   git clone [https://github.com/viniciusfdferreira835-source/P2.git](https://github.com/viniciusfdferreira835-source/P2.git)
