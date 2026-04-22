@@ -1,0 +1,11 @@
+public class Exercicio1 {
+    public static void main(String[] args) {
+        double resultado = calcularHipotenusa(3.0, 4.0);
+        System.out.println("O valor da hipotenusa é: " + resultado);
+    }
+
+    public static double calcularHipotenusa(double a, double b) {
+        double somaDosQuadrados = (a * a) + (b * b);
+        return Math.sqrt(somaDosQuadrados);
+    }
+}
