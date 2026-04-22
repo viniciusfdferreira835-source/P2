@@ -1,0 +1,19 @@
+public class Exercicio2 {
+    public static void main(String[] args) {
+        int[] meusNumeros = {13, 100, 22, 4, 10};
+        
+        int maior = encontrarMaiorValor(meusNumeros);
+        System.out.println("O maior número do array é: " + maior);
+    }
+    public static int encontrarMaiorValor(int[] array) {
+        int maiorValor = array[0]; 
+        
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > maiorValor) {
+                maiorValor = array[i];
+            }
+        }
+        
+        return maiorValor;
+    }
+}
