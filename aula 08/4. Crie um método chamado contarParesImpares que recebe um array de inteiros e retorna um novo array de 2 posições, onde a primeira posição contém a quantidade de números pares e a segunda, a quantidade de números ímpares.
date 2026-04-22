@@ -1,0 +1,28 @@
+public class Exercicio4 {
+    public static void main(String[] args) {
+        int[] numerosParaTestar = {999, 998, 277, 444, 887, 668, 4, 16 };
+        
+        int[] resultado = contarParesImpares(numerosParaTestar);
+        
+        System.out.println("Quantidade de Pares: " + resultado[0]);
+        System.out.println("Quantidade de Ímpares: " + resultado[1]);
+    }
+
+    public static int[] contarParesImpares(int[] numeros) {
+        int pares = 0;
+        int impares = 0;
+        
+        for (int num : numeros) {
+            if (num % 2 == 0) { 
+                pares++;
+            } else {
+                impares++;
+            }
+        }
+        
+      
+        int[] respostaFinal = {pares, impares};
+        
+        return respostaFinal; 
+    }
+}
