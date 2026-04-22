@@ -1,0 +1,22 @@
+public class Exercicio3 {
+    public static void main(String[] args) {
+        String[] listaDeAlunos = {"Neymar jr", "Everton", "Vinicius", "Assis"};
+     
+        boolean achou = elementoExiste(listaDeAlunos, "Neymar jr");
+        System.out.println("Neymar jr está na lista? " + achou);
+        
+        boolean achou2 = elementoExiste(listaDeAlunos, "Pelé");
+        System.out.println("Pelé está na lista? " + achou2);
+    }
+
+    public static boolean elementoExiste(String[] array, String busca) {
+     
+        for (String palavra : array) {
+         
+            if (palavra.equals(busca)) {
+                return true; 
+            }
+        }
+        return false; 
+    }
+}
