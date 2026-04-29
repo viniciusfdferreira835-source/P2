@@ -1,0 +1,44 @@
+public class Produto {
+    String nome;
+    double preco;
+    int quantidadeEstoque;
+
+    public Produto(String nome, double preco, int quantidadeInicial) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidadeEstoque = quantidadeInicial;
+    }
+
+
+    public void exibirInfo() {
+        System.out.println("Produto: " + nome + " | Preço: R$ " + preco + " | Estoque: " + quantidadeEstoque);
+    }
+
+    public double calcularValorTotalEmEstoque() {
+        return preco * quantidadeEstoque;
+    }
+
+    public void adicionarEstoque(int quantidade) {
+        this.quantidadeEstoque += quantidade; 
+    }
+    public static void main(String[] args) {
+
+        Produto p1 = new Produto("Notebook Dell", 3500.00, 10);
+        Produto p2 = new Produto("Mouse sem fio", 120.50, 50);
+
+        System.out.println("--- Informações Iniciais ---");
+        p1.exibirInfo();
+        p2.exibirInfo();
+
+        System.out.println("\n--- Calculando Valor de Estoque ---");
+        double valorTotalP1 = p1.calcularValorTotalEmEstoque();
+        System.out.println("O valor total em estoque do " + p1.nome + " é: R$ " + valorTotalP1);
+
+        System.out.println("\n--- Movimentação de Estoque ---");
+        System.out.println("Chegaram mais 30 unidades do " + p2.nome + "...");
+        p2.adicionarEstoque(30);
+
+        System.out.println("\n--- Informações Atualizadas ---");
+        p2.exibirInfo();
+    }
+}
