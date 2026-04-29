@@ -10,34 +10,34 @@ Consolidar os conhecimentos em lógica de programação e avançar para o paradi
 
 Os diretórios estão organizados por aula, acompanhando a evolução da complexidade dos algoritmos:
 
-* **[Aula 01 a 04] - Nivelamento e Configuração**
+* **[Aula 01 a 02] - Nivelamento e Configuração**
   * Configuração do ambiente (JDK, VS Code).
   * Estrutura básica de uma classe Java e método `main`.
 
-* **[Aula 05] - Fundamentos e Tipos de Dados**
+* **[Aula 03] - Fundamentos e Tipos de Dados**
   * Declaração de variáveis (`int`, `double`, `String`).
   * Operadores aritméticos e concatenação.
 
-* **[Aula 06] - Interação e Manipulação de Strings**
+* **[Aula 04] - Interação e Manipulação de Strings**
   * Leitura de dados via teclado usando a classe `Scanner`.
   * Métodos essenciais de String (`equals()`, `equalsIgnoreCase()`, `length()`, `substring()`, `indexOf()`).
 
-* **[Aula 07] - Estruturas de Decisão**
+* **[Aula 06] - Estruturas de Decisão**
   * Controle de fluxo com `if`, `else if` e `else`.
   * Operadores relacionais e lógicos (`&&`, `||`).
   * *Exemplos:* Sistemas de votação, classificação por idade e cálculo de descontos.
 
-* **[Aula 08] - Estruturas de Repetição (Laços)**
+* **[Aula 07] - Estruturas de Repetição (Laços)**
   * Automação de tarefas com laços `for` e `while`.
   * Evitando loops infinitos e controlando iterações.
   * *Exemplos:* Contagens regressivas, tabuadas e validação de senhas.
 
-* **[Aula 09] - Vetores (Arrays)**
+* **[Aula 08] - Vetores (Arrays)**
   * Armazenamento de múltiplos valores em arrays unidimensionais.
   * Percorrendo listas com o laço `foreach`.
   * *Exemplos:* Cálculo de média de notas de uma turma.
 
-* **[Aula 10] - Introdução à Orientação a Objetos (Previsto)**
+* **[Aula 09] - Introdução à Orientação a Objetos (Previsto)**
   * Transição da programação estruturada para POO.
   * Criação de Classes, Instanciação de Objetos e definição de Atributos/Métodos.
 
