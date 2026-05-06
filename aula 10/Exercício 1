@@ -1,0 +1,49 @@
+class Aluno {
+
+    String nome;
+    String matricula;
+    double nota1;
+    double nota2;
+    double notaTrabalho;
+
+    public Aluno(String nome, String matricula, double nota1, double nota2, double notaTrabalho) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.notaTrabalho = notaTrabalho;
+    }
+    public double calcularMedia() {
+        return (nota1 + nota2 + notaTrabalho) / 3.0; 
+    }
+
+  
+    public void verificarSituacao() {
+        
+        double media = calcularMedia(); 
+        
+        System.out.println("Aluno: " + nome + " | Matrícula: " + matricula);
+        System.out.printf("Média: %.2f - ", media); 
+        
+        if (media >= 7.0) {
+            System.out.println("APROVADO\n");
+        } else {
+            System.out.println("REPROVADO\n");
+        }
+    }
+}
+public class TesteAluno {
+    public static void main(String[] args) {
+        
+        Aluno aluno1 = new Aluno("Vinicius fernando", "2026001", 8.0, 7.5, 9.0);
+        
+    
+        Aluno aluno2 = new Aluno("Neymar", "2026002", 5.5, 6.0, 6.5);
+
+        System.out.println("--- SISTEMA DE NOTAS DA UFRPE ---\n");
+
+    
+        aluno1.verificarSituacao();
+        aluno2.verificarSituacao();
+    }
+}
