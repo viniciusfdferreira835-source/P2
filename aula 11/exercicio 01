@@ -1,0 +1,65 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ListaDeCompras {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        ArrayList<String> lista = new ArrayList<>();
+        int opcao = 0;
+
+        System.out.println("🛒 GERENCIADOR DE LISTA DE COMPRAS 🛒");
+
+        while (opcao != 4) {
+            System.out.println("\n--- MENU ---");
+            System.out.println("1. Adicionar item");
+            System.out.println("2. Listar itens");
+            System.out.println("3. Remover item");
+            System.out.println("4. Sair");
+            System.out.print("Escolha uma opção: ");
+            
+            opcao = leitor.nextInt();
+            leitor.nextLine(); 
+
+            switch (opcao) {
+                case 1:
+                    System.out.print("Digite o nome do item: ");
+                    String novoItem = leitor.nextLine();
+                    lista.add(novoItem);
+                    System.out.println("✅ Item adicionado com sucesso!");
+                    break;
+                    
+                case 2:
+                    System.out.println("\n--- SUA LISTA ---");
+                    if (lista.isEmpty()) {
+                        System.out.println("Sua lista está vazia no momento.");
+                    } else {
+                        for (int i = 0; i < lista.size(); i++) {
+                            System.out.println(i + ". " + lista.get(i));
+                        }
+                    }
+                    break;
+                    
+                case 3:
+                    System.out.print("Digite o número (índice) do item que deseja remover: ");
+                    int indice = leitor.nextInt();
+                
+                    if (indice >= 0 && indice < lista.size()) {
+                        String itemRemovido = lista.remove(indice);
+                        System.out.println("🗑️ O item '" + itemRemovido + "' foi removido!");
+                    } else {
+                        System.out.println("❌ Índice inválido! Liste os itens primeiro para ver os números corretos.");
+                    }
+                    break;
+                    
+                case 4:
+                    System.out.println("Encerrando o programa. Até a próxima!");
+                    break;
+                    
+                default:
+                    System.out.println("Opção inválida! Escolha um número de 1 a 4.");
+            }
+        }
+        
+        leitor.close();
+    }
+}
