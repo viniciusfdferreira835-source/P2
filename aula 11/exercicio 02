@@ -1,0 +1,68 @@
+class Retangulo {
+    private double altura = 1.0;
+    private double largura = 1.0;
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public double getLargura() {
+        return largura;
+    }
+    public void setAltura(double altura) {
+        if (altura > 0.0 && altura < 20.0) {
+            this.altura = altura;
+        } else {
+            System.out.println("❌ Erro: A altura deve ser maior que 0.0 e menor que 20.0.");
+        }
+    }
+
+    public void setLargura(double largura) {
+        if (largura > 0.0 && largura < 20.0) {
+            this.largura = largura;
+        } else {
+            System.out.println("❌ Erro: A largura deve ser maior que 0.0 e menor que 20.0.");
+        }
+    }
+
+    // Métodos de cálculo
+    public double calcularArea() {
+        return altura * largura;
+    }
+
+    public double calcularPerimetro() {
+        return 2 * (altura + largura);
+    }
+}
+
+public class TesteRetangulo {
+    public static void main(String[] args) {
+        System.out.println("🟩 TESTE DA CLASSE RETÂNGULO 🟩\n");
+
+        Retangulo meuRetangulo = new Retangulo();
+        System.out.println("--- Valores Padrões ---");
+        System.out.println("Altura: " + meuRetangulo.getAltura());
+        System.out.println("Largura: " + meuRetangulo.getLargura());
+        System.out.println("Área: " + meuRetangulo.calcularArea());
+        System.out.println("Perímetro: " + meuRetangulo.calcularPerimetro());
+
+        System.out.println("\n--- Testando valores VÁLIDOS ---");
+        meuRetangulo.setAltura(5.5);
+        meuRetangulo.setLargura(10.0);
+        System.out.println("Nova Altura: " + meuRetangulo.getAltura());
+        System.out.println("Nova Largura: " + meuRetangulo.getLargura());
+        System.out.println("Nova Área: " + meuRetangulo.calcularArea());
+        System.out.println("Novo Perímetro: " + meuRetangulo.calcularPerimetro());
+
+        System.out.println("\n--- Testando valores INVÁLIDOS ---");
+        System.out.println("Tentando definir largura como 25.0...");
+        meuRetangulo.setLargura(25.0);
+        
+        System.out.println("Tentando definir altura como -2.0...");
+        meuRetangulo.setAltura(-2.0);  
+
+        System.out.println("\n--- Valores após tentativa de quebra ---");
+        System.out.println("Altura continua: " + meuRetangulo.getAltura());
+        System.out.println("Largura continua: " + meuRetangulo.getLargura());
+    }
+}
